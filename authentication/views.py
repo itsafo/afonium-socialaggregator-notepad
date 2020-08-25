@@ -1,18 +1,18 @@
 # -*- encoding: utf-8 -*-
 """
-License: MIT
-Copyright (c) 2019 - present AppSeed.us
+HEREIN CONTAINS THE PYTHON CODE 
+THAT CONFIRMS THE FUCTION OF THE REGISTERED URL 
 """
 
 from django.shortcuts import render
 
-# Create your views here.
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.forms.utils import ErrorList
 from django.http import HttpResponse
-from .forms import LoginForm, SignUpForm
+from .forms import LoginForm, SignUpForm, UserUpdateForm, ProfileUpdateForm
 
 def login_view(request):
     form = LoginForm(request.POST or None)
@@ -59,3 +59,28 @@ def register_user(request):
         form = SignUpForm()
 
     return render(request, "accounts/register.html", {"form": form, "msg" : msg, "success" : success })
+
+
+@login_required(login_url="/login/")
+def profile(request):
+    if request.method == 'POST':
+        u_form = UserUpdateForm(request.POST, instance=request.user)
+        p_form = ProfileUpdateForm(request.POST,
+                                   request.FILES,
+                                   instance=request.user.profile)
+        if u_form.is_valid() and p_form.is_valid():
+            u_form.save()
+            p_form.save()
+            messages.success(request, f'Your account has been updated!')
+            return redirect('profile')
+
+    else:
+        u_form = UserUpdateForm(instance=request.user)
+        p_form = ProfileUpdateForm(instance=request.user.profile)
+
+    context = {
+        'u_form': u_form,
+        'p_form': p_form
+    }
+
+    return render(request, 'profile.html', context)

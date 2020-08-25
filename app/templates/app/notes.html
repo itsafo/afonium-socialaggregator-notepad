@@ -1,0 +1,138 @@
+
+
+<!-- Uses in-built functions such as item -->
+
+
+{% extends "layouts/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %} Notes {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="page-inner">
+        <div class="card">
+            <ul class="breadcrumbs">
+                <li class="nav-home mr-1">
+                    <a href="{% url 'notes' %}">
+                        <i class="flaticon-home mr-4"></i>
+                    </a>
+                </li>
+                <li class="nav-home mr-2">
+                    <h3> All Content </h3> 
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle btn btn-outline-secondary mr-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
+                    <div class="dropdown-menu bg-white">
+                      {% for cat in cat_menu %}
+                        <a class="dropdown-item text-dark" href="{% url 'category-detail' cat.pk %}">{{ cat }}</a>
+                      {% endfor %}
+                      <div class="dropdown-divider "></div>
+                      <a class="dropdown-item btn btn-secondary" href="{% url 'add_category' %}">Add Category</a>
+                    </div>
+                </li>              
+                <li class="nav-home">
+                    <a class="btn btn-outline-secondary mr-4" href="/socials.html">Socials
+                    </a>
+                </li>
+            </ul>
+        </div>
+            
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <ul class="list-group list-group-flush">
+                        <li>
+                            {% for post in posts %}
+                            <div class="card-header">
+                                <h4 class="card-title"><a href="{% url 'note-update' post.id %}">Title: {{ post.title }} by {{ post.author }}</a></h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="tab-content mt-2 mb-3" id="pills-tabContent">
+                                    <h4>Content:</h4>
+                                    <p>Abeg work automaticaly! {{ post.content }}</p>
+                                </div>
+                            </div>  
+                            {% endfor %}                     
+                        </li>                       
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h4 class="card-title"></h4>
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-icon btn-round btn-outline-primary mr-2">
+                                <a href="{% url 'notes' %}"><i class="fab fa-twitter"></i></a>
+                                </button>
+                                <button type="button" class="btn btn-icon btn-round btn-outline-info mr-2 nav-item">
+                                <a href="/socials.html"><i class="fab fa-linkedin-in"></i></a> 
+                                </button>
+                                <button type="button" class="btn btn-icon btn-round btn-outline-primary mr-2">
+                                <i class="fab fa-facebook-f"></i>
+                                </button>
+                                <button type="button" class="btn btn-icon btn-round btn-outline-danger">
+                                <i class="fab fa-instagram"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <fieldset class="form-group">
+                                <legend class="border-bottom mb-4">Create New Content!</legend>
+                                {{ form.media }}
+                                {{ form|crispy }}
+                            </fieldset>
+                            <div class="form-group">
+                                <button class="btn btn-outline-info" type="submit">Post</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE -->
+{% block javascripts %}{% endblock javascripts %}
+    
+    <!-- Script for modal pop-ups -->
+    <script>
+        //== Class definition
+        var SweetAlert2Demo = function() {
+
+            //== Demos
+            var initDemos = function() {
+                $('#alert_demo_6').click(function(e) {
+                    swal("This modal will disappear soon!", {
+                        buttons: false,
+                        timer: 3000,
+                    });
+                });
+
+            };
+
+            return {
+                //== Init
+                init: function() {
+                    initDemos();
+                },
+            };
+        }();
+
+        //== Class Initialization
+        jQuery(document).ready(function() {
+            SweetAlert2Demo.init();
+        });
+    </script>

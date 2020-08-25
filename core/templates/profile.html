@@ -1,0 +1,194 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Profile {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="page-inner">
+        <div class="page-header">
+            <h4 class="page-title">Profile</h4>
+            <ul class="breadcrumbs">
+                <li class="nav-home">
+                    <a href="#">
+                        <i class="flaticon-home"></i>
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="flaticon-right-arrow"></i>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Profile Update</a>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">{{ request.user.email }}</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                            <div class="avatar-sm float-left mr-2">
+                                <img src="{{ user.profile.image.url }}" alt="..." class="avatar-img rounded-circle">
+                            </div>      
+                            <div class="col-md-6 col-lg-4">
+                                <label for="exampleFormControlFile1">Update profile picture</label>
+                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" value="">
+                                    <span class="form-check-sign">Agree with terms and conditions</span>
+                                </label>
+                            </div>
+                            </div>
+                            <div class="form-check">
+                                <label>Gender</label><br/>
+                                <label class="form-radio-label">
+                                    <input class="form-radio-input" type="radio" name="optionsRadios" value=""  checked="">
+                                    <span class="form-radio-sign">Male</span>
+                                </label>
+                                <label class="form-radio-label ml-3">
+                                    <input class="form-radio-input" type="radio" name="optionsRadios" value="">
+                                    <span class="form-radio-sign">Female</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <button class="btn btn-success">Submit</button>
+                        <button class="btn btn-danger">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4 class="page-title">Pricing</h4>
+        <div class="row justify-content-center align-items-center mb-1">
+            <div class="col-md-3 pl-md-0">
+                <div class="card card-pricing">
+                    <div class="card-header">
+                        <h4 class="card-title">Basic</h4>
+                        <div class="card-price">
+                            <span class="price">FREE</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul class="specification-list">
+                            <li>
+                                <span class="name-specification">Validity Period</span>
+                                <span class="status-specification">Unlimited</span>
+                            </li>
+                            <li>
+                                <span class="name-specification">Chat History</span>
+                                <span class="status-specification">No</span>
+                            </li>
+                            <li>
+                                <span class="name-specification">Analytics</span>
+                                <span class="status-specification">Unlimited</span>
+                            </li>
+                            <li>
+                                <span class="name-specification">Support</span>
+                                <span class="status-specification">Unlimited</span>
+                            </li>
+                            <li>
+                                <span class="name-specification">Live Support</span>
+                                <span class="status-specification">No</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary btn-block"><b>Get Started</b></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pl-md-0 pr-md-0">
+                <div class="card card-pricing card-pricing-focus card-primary">
+                    <div class="card-header">
+                        <h4 class="card-title">Professional</h4>
+                        <div class="card-price">
+                            <span class="price">$10</span>
+                            <span class="text">/mo</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul class="specification-list">
+                            <li>
+                                <span class="name-specification">Validity Period</span>
+                                <span class="status-specification">Unlimited</span>
+                            </li>
+                            <li>
+                                <span class="name-specification">Chat History</span>
+                                <span class="status-specification">3 Month</span>
+                            </li>
+                            <li>
+                                <span class="name-specification">Analytics</span>
+                                <span class="status-specification">3 Month</span>
+                            </li>
+                            <li>
+                                <span class="name-specification">Support</span>
+                                <span class="status-specification">Unlimited</span>
+                            </li>
+                            <li>
+                                <span class="name-specification">Live Support</span>
+                                <span class="status-specification">Unlimited</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-light btn-block"><b>Get Started</b></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pr-md-0">
+                <div class="card card-pricing">
+                    <div class="card-header">
+                        <h4 class="card-title">Team</h4>
+                        <div class="card-price">
+                            <span class="price">$30</span>
+                            <span class="text">/mo</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul class="specification-list">
+                            <li>
+                                <span class="name-specification">Validity Period</span>
+                                <span class="status-specification">Unlimited</span>
+                            </li>
+                            <li>
+                                <span class="name-specification">Chat History</span>
+                                <span class="status-specification">1 Year</span>
+                            </li>
+                            <li>
+                                <span class="name-specification">Analytics</span>
+                                <span class="status-specification">1 Year</span>
+                            </li>
+                            <li>
+                                <span class="name-specification">Support</span>
+                                <span class="status-specification">Unlimited</span>
+                            </li>
+                            <li>
+                                <span class="name-specification">Live Support</span>
+                                <span class="status-specification">Unlimited</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary btn-block"><b>Get Started</b></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE -->
+{% block javascripts %}{% endblock javascripts %}

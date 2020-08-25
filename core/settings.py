@@ -25,13 +25,17 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', config('SERVER', default='127.0.0.1')
 # Application definition
 
 INSTALLED_APPS = [
+    # 'app.config.MyConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app'  # Enable the inner app 
+    'app',  # Enable the inner app 
+    'authentication.config.AuthConfig',
+    'ckeditor',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -120,9 +124,26 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'core/static/assets/img')
+MEDIA_URL = '/static/assets/img/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'core/static'),
 )
 #############################################################
 #############################################################
+
+
+
+
+
+# --- Deprecated settings file ----
+
+# Popup template
+# POPUP_TEMPLATE_NAME_CREATE = 'popup/create.html'
+# POPUP_TEMPLATE_NAME_UPDATE = 'popup/update.html'

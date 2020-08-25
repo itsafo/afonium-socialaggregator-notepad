@@ -1,0 +1,57 @@
+
+<!-- This html file displays my categories list -->
+
+
+{% extends "layouts/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %} Categories {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="page-inner">
+        <div class="card">
+            <ul class="breadcrumbs">
+                <li class="nav-home mr-1">
+                    <a href="">
+                        <i class="flaticon-home mr-4"></i>
+                    </a>
+                </li>
+                <li class="nav-home">
+                    <a class="btn btn-outline-secondary" href="">Add Category
+                    </a>
+                </li>
+            </ul>
+        </div>
+            
+        <div class="row">
+            <h4>{{ category }}</h4>
+            <div class="col-md-4">
+                <div class="card">
+                    <ul class="list-group list-group-flush">
+                        <li>
+                            <div class="card-header">
+                                <h4 class="card-title"><a href="">Title: - {{ category }} by {{ post.author }}</a></h4>
+                                {% for category in object_list %}
+                                    <li>{{ category.name }}</li>
+                                {% endfor %}
+                            </div>                   
+                        </li>                       
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE -->
+{% block javascripts %}{% endblock javascripts %}

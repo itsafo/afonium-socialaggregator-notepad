@@ -77,6 +77,17 @@ warning-color : #ffa534
 danger-color : #f3545d
 
 -------------------------------------------------------------------*/
+/*New Shit*/
+.content-section {
+  background: #ffffff;
+  padding: 5px 5px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+/*End of New shit*/
+
+
 *:focus {
   outline: 0 !important;
   -webkit-box-shadow: none !important;
@@ -93,9 +104,9 @@ body {
   color: #575962; }
 
 a {
-  color: #1572E8; }
+  color: #452d6d; }
   a:hover, a:focus {
-    color: #1269DB; }
+    color: #452d6d; }
 
 h1,
 .h1 {
@@ -479,7 +490,7 @@ body {
         background: rgba(0, 0, 0, 0.03); }
         .sidebar .nav > .nav-item.submenu > li > a i, .sidebar[data-background-color="white"] .nav > .nav-item.submenu > li > a i {
           color: rgba(23, 125, 255, 0.76); }
-      .sidebar .nav > .nav-item > a:hover, .sidebar .nav > .nav-item a:focus, .sidebar[data-background-color="white"] .nav > .nav-item > a:hover, .sidebar[data-background-color="white"] .nav > .nav-item a:focus {
+      .sidebar .nav > .nav-item > a:hover, .sidebar .nav > .nav-item a:focus, .sidebar[data-background-color="#452d6d"] .nav > .nav-item > a:hover, .sidebar[data-background-color="white"] .nav > .nav-item a:focus {
         background: rgba(0, 0, 0, 0.03); }
       .sidebar .nav > .nav-item a, .sidebar[data-background-color="white"] .nav > .nav-item a {
         display: flex;

@@ -1,0 +1,30 @@
+
+
+<!-- This html file creates my categories 
+from Addcategory view class -->
+
+{% extends "layouts/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %} Notes {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+     <div class="layui-container" style="margin: 4px">
+         <form class="form-group"
+               action=""
+               method="post">
+             {% csrf_token %}
+             {{ form.media }}
+             {{ form }}
+             <button class="btn btn-secondary">Add</button>
+         </form>
+     </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE -->
+{% block javascripts %}{% endblock javascripts %}

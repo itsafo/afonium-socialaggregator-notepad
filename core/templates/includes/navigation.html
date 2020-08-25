@@ -5,7 +5,7 @@
 			<div class="logo-header" data-background-color="dark2">
 				
 				<a href="/" class="logo">
-					<img src="/static/assets/img/logo.svg" alt="navbar brand" class="navbar-brand">
+					<img src="/static/assets/img/afonium_full_logo2.jpg" alt="navbar brand" class="navbar-brand">
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">
@@ -229,14 +229,14 @@
 							<li class="nav-item dropdown hidden-caret">
 								<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
 									<div class="avatar-sm">
-										<img src="/static/assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
+										<img src="{{ user.profile.image.url }}" alt="..." class="avatar-img rounded-circle">
 									</div>
 								</a>
 								<ul class="dropdown-menu dropdown-user animated fadeIn">
 									<div class="dropdown-user-scroll scrollbar-outer">
 										<li>
 											<div class="user-box">
-												<div class="avatar-lg"><img src="/static/assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
+												<div class="avatar-lg"><img src="{{ user.profile.image.url }}" alt="image profile" class="avatar-img rounded"></div>
 												<div class="u-text">
 													<h4>
 														{{ request.user.user }}
@@ -251,7 +251,7 @@
 										</li>
 										<li>
 											<div class="dropdown-divider"></div>
-											<a class="dropdown-item" href="#">My Profile</a>
+											<a class="dropdown-item" href="/profile.html">My Profile</a>
 											<a class="dropdown-item" href="#">My Balance</a>
 											<a class="dropdown-item" href="#">Inbox</a>
 											<div class="dropdown-divider"></div>
