@@ -20,7 +20,7 @@ SECRET_KEY = config('SECRET_KEY', default='S#perS3crEt_1122')
 DEBUG = config('DEBUG', default=False)
 
 # load production server from .env
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'afonium.herokuapp.com', config('SERVER', default='127.0.0.1')]
+ALLOWED_HOSTS = ['afoniumlive-cli.herokuapp.com', 'localhost', '127.0.0.1', config('SERVER', default='127.0.0.1')]
 
 # Application definition
 
@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'app',  # Enable the inner app 
     'authentication.config.AuthConfig',
     'ckeditor',
-    'crispy_forms'
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -46,14 +46,14 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware'
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
     
 ]
 
-ROOT_URLCONF = 'core.urls'
+ROOT_URLCONF = 'afoniumcore.urls'
 LOGIN_REDIRECT_URL = "home"   # Route defined in app/urls.py
 LOGOUT_REDIRECT_URL = "home"  # Route defined in app/urls.py
-TEMPLATE_DIR = os.path.join(BASE_DIR, "core/templates")  # ROOT dir for templates
+TEMPLATE_DIR = os.path.join(BASE_DIR, "afoniumcore/templates")  # ROOT dir for templates
 
 TEMPLATES = [
     {
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'core.wsgi.application'
+WSGI_APPLICATION = 'afoniumcore.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
@@ -125,7 +125,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'core/static/assets/img')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'afoniumcore/static/assets/img')
 MEDIA_URL = '/static/assets/img/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -134,7 +134,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'core/static'),
+    os.path.join(BASE_DIR, 'afoniumcore/static'),
 )
 #############################################################
 #############################################################
