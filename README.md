@@ -1,4 +1,4 @@
-# [Django Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark)
+# [afonium](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark)
 
 > **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - features:
 
