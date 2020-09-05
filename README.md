@@ -1,8 +1,8 @@
-# [Django Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark)
+# [afonium]
 
 > **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - features:
 
-- UI Kit: **[Atlantis Dashboard](https://www.themekita.com/atlantis-lite-bootstrap-dashboard.html?ref=appseed)** (Free version) provided by **ThemeKita**
+- UI Kit: **[afonium]()** (Free version) provided by **ThemeKita**
 - UI-Ready app, SQLite Database, Django Native ORM
 - Modular design, clean code-base
 - Session-Based Authentication, Forms validation
