@@ -122,15 +122,17 @@ class AddCategory(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
-        
+
 
 def CategoryView(request, pk_test):
     parent = Category.objects.get(id=pk_test)
     category_list = parent.post_set.all()
+    cat_menu = Category.objects.all()
     form = PostForm()
     context = {
         'cat_name':parent,
         'cate':category_list,
+        'cat_list':cat_menu,
         'form':form
     }
     return render(request, 'app/categorized_detail.html', context)
@@ -142,7 +144,7 @@ def CategoryView(request, pk_test):
     # ----------------------------------
     # def get_context_data(self, *args, **kwargs):
     #     cat_menu = Category.objects.all()
-    #     context = super(CategoryView, self).get_context_data(*args, **kwargs)
+    #     # context = super(CategoryView, self).get_context_data(*args, **kwargs)
     #     context["cat_menu"] = cat_menu 
     #     return context 
 

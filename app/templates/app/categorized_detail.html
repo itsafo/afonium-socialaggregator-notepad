@@ -1,5 +1,5 @@
 
-<!-- This html file is the maint working template for categories
+<!-- This html file is the main working template for categories
 Uses in-built functions such as object_list
 -->
 
@@ -28,7 +28,7 @@ Uses in-built functions such as object_list
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle btn btn-outline-secondary mr-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
                     <div class="dropdown-menu bg-white">
-                      {% for cat in cat_menu %}
+                      {% for cat in cat_list %}
                         <a class="dropdown-item text-dark" href="{% url 'category-detail' cat.pk %}">{{ cat }}</a>
                       {% endfor %}
                       <div class="dropdown-divider "></div>
@@ -45,8 +45,10 @@ Uses in-built functions such as object_list
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
+                <div class="card-header">
+                    <h3>{{ cat_name.name }}</h3> 
+                </div>
                     <ul class="list-group list-group-flush">
-                        <h3>{{ cat_name.name }}</h3> 
                         {% for content in cate %}
                         <li>
                             <div class="card-header">
