@@ -1,4 +1,4 @@
-
+		{% if user.is_authenticated %}
 		<div class="main-header">
 			
 			<!-- Logo Header -->
@@ -24,7 +24,7 @@
 			<!-- Navbar Header -->
 			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="dark">
 				
-				{% if user.is_authenticated %}
+				
 
 					<div class="container-fluid">
 						<div class="collapse" id="search-nav">
@@ -263,9 +263,10 @@
 						</ul>
 					</div>
 
-				{% endif %}
+				
 				
 			</nav>
 			<!-- End Navbar -->
 
 		</div>
+		{% endif %}
