@@ -13,7 +13,7 @@ from django.urls import reverse
 
 class Category(models.Model):
 	name = models.CharField(max_length=100, db_index=True)
-	slug = models.SlugField(unique=True)
+	# slug = models.SlugField(unique=True)
 
 	class Meta:
 		ordering = ('name',)
@@ -28,7 +28,7 @@ class Category(models.Model):
 
 class Post(models.Model):
 	title = models.CharField(max_length=100, default='Content Pilot')
-	category = models.ForeignKey(Category, verbose_name="Category", default="Choose Category", on_delete=models.CASCADE,)
+	category = models.ForeignKey(Category, verbose_name="Category", default= "Choose", on_delete=models.CASCADE,)
 	content = RichTextField(blank=True, null=True, db_index=True)
 	date_posted = models.DateTimeField(default=timezone.now)
 	author = models.ForeignKey(User, on_delete=models.CASCADE)

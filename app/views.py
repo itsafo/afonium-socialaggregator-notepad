@@ -6,7 +6,7 @@ Copyright (c) 2019 - present AppSeed.us
 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.shortcuts import render, get_object_or_404, redirect, render_to_response
+from django.shortcuts import render, get_object_or_404, redirect
 from django.template import loader
 from django.http import HttpResponse
 from django import template, forms
@@ -17,6 +17,7 @@ from .forms import PostForm
 from django.views.generic import CreateView, ListView, UpdateView, DetailView
 
 
+# **** I HAVE DEPRECATED THIS CLASS AND USED "Notes" CLASS INSTEAD *****
 # You can use this type of login authentication for a function
 # But can't use this for a class
 @login_required(login_url="/login/") # This is a decoratorto authenticate user
@@ -27,6 +28,7 @@ def index(request):
         'posts': Post.objects.all()
     }
     return render(request, "index.html", context)
+# **************************************************************************
 
 
 @login_required(login_url="/login/")
@@ -117,6 +119,10 @@ class AddCategory(LoginRequiredMixin, CreateView):
     template_name = 'app/create.html'
     fields = '__all__'
 
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+        
 
 def CategoryView(request, pk_test):
     parent = Category.objects.get(id=pk_test)

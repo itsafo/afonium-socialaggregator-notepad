@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'app',  # Enable the inner app 
     'authentication.config.AuthConfig',
     'ckeditor',
+    'ckeditor_uploader',
     'crispy_forms',
 ]
 
@@ -126,7 +127,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'afoniumcore/static/assets/img')
-MEDIA_URL = '/static/assets/img/'
+MEDIA_URL = '/img/'
+CKEDITOR_UPLOAD_PATH = 'uploads/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 

@@ -1,11 +1,12 @@
 
 		<!-- Sidebar -->
+		{% if user.is_authenticated %}
 		<div class="sidebar sidebar-style-2" data-background-color="dark2">
 					
 			<div class="sidebar-wrapper scrollbar scrollbar-inner">
 				<div class="sidebar-content">
 				
-					{% if user.is_authenticated %}
+					
 
 						<div class="user">
 							<div class="avatar-sm float-left mr-2">
@@ -122,9 +123,10 @@
 							</li>
 						</ul>
 					
-					{% endif %}	
+					
 
 				</div>
 			</div>
 		</div>
+		{% endif %}	
 		<!-- End Sidebar -->

@@ -1,0 +1,2 @@
+Requirement already satisfied: django in c:\users\user\onedri~1\career\machin~1\webapp~1\test_run\enviro~1\3_proj~3\afoniu~1\env\lib\site-packages (2.1.15)
+Requirement already satisfied: pytz in c:\users\user\onedri~1\career\machin~1\webapp~1\test_run\enviro~1\3_proj~3\afoniu~1\env\lib\site-packages (from django) (2020.1)
