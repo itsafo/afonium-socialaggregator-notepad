@@ -48,12 +48,12 @@
                         <li>
                             {% for post in posts %}
                             <div class="card-header">
-                                <h4 class="card-title"><a href="{% url 'note-update' post.id %}">Title: {{ post.title }} by {{ post.author }}</a></h4>
+                                <h4 class="card-title"><a href="{% url 'note-update' post.id %}">Title: {{ post.title }} </a></h4>
                             </div>
                             <div class="card-body">
                                 <div class="tab-content mt-2 mb-3" id="pills-tabContent">
                                     <h4>Content:</h4>
-                                    <p>Abeg work automaticaly! {{ post.content }}</p>
+                                    <p>{{ post.content }}</p>
                                 </div>
                             </div>  
                             {% endfor %}                     

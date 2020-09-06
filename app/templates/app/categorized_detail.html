@@ -52,12 +52,12 @@ Uses in-built functions such as object_list
                         {% for content in cate %}
                         <li>
                             <div class="card-header">
-                                <h4 class="card-title"><a href="">Title: {{ content.title }} by {{ content.author }}</a></h4>
+                                <h4 class="card-title"><a href="">Title: {{ content.title }}</a></h4>
                             </div>
                             <div class="card-body">
                                 <div class="tab-content mt-2 mb-3" id="pills-tabContent">
                                     <h4>Content:</h4>
-                                    <p>Abeg work automaticaly! {{ content.content }}</p>
+                                    <p>{{ content.content }}</p>
                                 </div>
                             </div>  
                                                 

@@ -19,10 +19,10 @@ urlpatterns = [
     re_path(r'^.*\.html', pages, name='pages'),
 
     # The home page
-    path('', Notes.as_view(), name='home'),
+    path('', Notes, name='home'),
     # path('category/', CategoryDetail, name='category-list'),
     # path('category/<int:id>/', CatsDetail, name='cats-detail'),
-    path('notes/', Notes.as_view(), name='notes'),
+    path('notes/', Notes, name='notes'),
     path('notes/<int:pk>/', NoteDetail.as_view(), name='note-detail'),
     path("category/<str:pk_test>/", CategoryView, name='category-detail'),
     path('notes/<int:pk>/update/', UpdateNote.as_view(), name='note-update'),

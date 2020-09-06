@@ -49,24 +49,46 @@ for item in choices:
 # Dont use a desorator
 # Puting Creatview argument before ListView works for
 # Having form and list of notes on the same page
-class Notes(LoginRequiredMixin, CreateView, ListView):
-    model = Post                        # Calling the model in the database
-    template_name = 'app/notes.html'  # <app>/<model>_<viewtype>.html
-    context_object_name = 'posts'       # Assining a representation for the model in the html file
-    ordering = ['-date_posted']
-    fields = ['title', 'category', 'content']   # Required for the form
-
-    # Colecting category data and creating nav links
-    def get_context_data(self, *args, **kwargs):
-        cat_menu = Category.objects.all()
-        context = super(Notes, self).get_context_data(*args, **kwargs)
-        context["cat_menu"] = cat_menu 
-        return context 
 
 
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        return super().form_valid(form)
+
+@login_required(login_url="/login/")
+def Notes(request):
+    posts_get = Post.objects.filter(author=request.user)     # Code to get list of categories
+    cat_menu = Category.objects.all()
+    form = PostForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+    else:
+        form = PostForm()
+    context = {
+        'posts':posts_get,
+        'cat_menu':cat_menu,
+        'form':form
+    }
+    return render(request, 'app/notes.html', context)
+
+
+
+
+@login_required(login_url="/login/")
+def CategoryView(request, pk_test):
+    parent = Category.objects.get(id=pk_test)
+    category_list = parent.post_set.filter(author=request.user)
+    # Code to get list of categories
+    cat_menu = Category.objects.all()
+    form = PostForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+    else:
+        form = PostForm()
+    context = {
+        'cat_name':parent,
+        'cate':category_list,
+        'cat_list':cat_menu,
+        'form':form
+    }
+    return render(request, 'app/categorized_detail.html', context)
 
 class NoteDetail(CreateView, ListView):
     model =  Post
@@ -82,7 +104,23 @@ class NoteDetail(CreateView, ListView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
-
+# ++++++++++++++++++++++++++++
+# class Notes(LoginRequiredMixin, CreateView, ListView):
+#     posts = Post.objects.all()         # Calling the model in the database
+#     template_name = 'app/notes.html'  # <app>/<model>_<viewtype>.html
+#     context_object_name = 'posts'       # Assining a representation for the model in the html file
+#     ordering = ['-date_posted']
+#     fields = ['title', 'category', 'content']   # Required for the form
+    # Colecting category data and creating nav links
+    # def get_context_data(self, *args, **kwargs):
+    #     cat_menu = Category.objects.all()
+    #     context = super(Notes, self).get_context_data(*args, **kwargs)
+    #     context["cat_menu"] = cat_menu 
+    #     return context 
+    # def form_valid(self, form):
+    #     form.instance.author = self.request.user
+    #     return super().form_valid(form)
+# ++++++++++++++++++++++++++++++
 
 class NewNote(LoginRequiredMixin, CreateView):
     model = Post
@@ -124,18 +162,7 @@ class AddCategory(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
-def CategoryView(request, pk_test):
-    parent = Category.objects.get(id=pk_test)
-    category_list = parent.post_set.all()
-    cat_menu = Category.objects.all()
-    form = PostForm()
-    context = {
-        'cat_name':parent,
-        'cate':category_list,
-        'cat_list':cat_menu,
-        'form':form
-    }
-    return render(request, 'app/categorized_detail.html', context)
+
     #  ---- Working on updating notes -----------
     # fields = ['title', 'category', 'content']    
     # def form_valid(self, form):
