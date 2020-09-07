@@ -78,6 +78,12 @@ danger-color : #f3545d
 
 -------------------------------------------------------------------*/
 /*New Shit*/
+
+.modal-header {
+  background-color: darkblue;
+  color: white;
+}
+
 .content-section {
   background: #ffffff;
   padding: 5px 5px;

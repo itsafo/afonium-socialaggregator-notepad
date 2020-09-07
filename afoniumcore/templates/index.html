@@ -17,7 +17,7 @@
         <div class="card">
             <ul class="breadcrumbs">
                 <li class="nav-home mr-1">
-                    <a href="{% url 'notes' %}">
+                    <a href="{% url 'notes' %}" id="alert_demo_8">
                         <i class="flaticon-home mr-4"></i>
                     </a>
                 </li>
@@ -114,4 +114,65 @@
 {% endblock content %}
 
 <!-- Specific JS goes HERE -->
-{% block javascripts %}{% endblock javascripts %}
+{% block javascripts %}
+    <script>
+        //== Class definition
+        var SweetAlert2Demo = function() {
+
+            //== Demos
+            var initDemos = function() {
+
+                $('#alert_demo_8').click(function(e) {
+                    swal({
+                        title: 'Are you sure?',
+                        text: "You won't be able to revert this!",
+                        type: 'warning',
+                        buttons:{
+                            cancel: {
+                                visible: true,
+                                text : 'No, cancel!',
+                                className: 'btn btn-danger'
+                            },                  
+                            confirm: {
+                                text : 'Yes, delete it!',
+                                className : 'btn btn-success'
+                            }
+                        }
+                    }).then((willDelete) => {
+                        if (willDelete) {
+                            swal("Poof! Your imaginary file has been deleted!", {
+                                icon: "success",
+                                buttons : {
+                                    confirm : {
+                                        className: 'btn btn-success'
+                                    }
+                                }
+                            });
+                        } else {
+                            swal("Your imaginary file is safe!", {
+                                buttons : {
+                                    confirm : {
+                                        className: 'btn btn-success'
+                                    }
+                                }
+                            });
+                        }
+                    });
+                })
+
+            };
+
+            return {
+                //== Init
+                init: function() {
+                    initDemos();
+                },
+            };
+        }();
+
+        //== Class Initialization
+        jQuery(document).ready(function() {
+            SweetAlert2Demo.init();
+        });
+    </script>
+{% endblock javascripts %}

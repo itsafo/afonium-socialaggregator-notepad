@@ -1,3 +1,9 @@
+
+.modal-header {
+  background-color: darkblue;
+  color: white;
+}
+
 .custom-template {
 	position: fixed;
 	top: 50%;
@@ -19,6 +25,7 @@
 .custom-template.open {
 	right: 0px;
 }
+
 
 .custom-template .custom-toggle {
 	position: absolute;

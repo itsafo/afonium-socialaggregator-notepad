@@ -24,10 +24,16 @@
 		});
 	</script>
 
+	<script type="text/javascript">
+		 $(window).load(function(){        
+		   $('#myModal').modal('show');
+		    }); 
+	</script>
 
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/static/assets/css/atlantis.min.css">
+
 
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link rel="stylesheet" href="/static/assets/css/demo.css">
@@ -50,8 +56,6 @@
 			<div class="content">
 
 				{% block content %}{% endblock content %}
-			
-			</div>
 
 			{% include 'includes/footer.html' %}
 
@@ -64,7 +68,9 @@
 	{% include 'includes/scripts.html' %}
 
 	<!-- Specific JS goes HERE -->
-    {% block javascripts %}{% endblock javascripts %}
+    {% block javascripts %}
+
+    {% endblock javascripts %}
 	
 </body>
 </html>
