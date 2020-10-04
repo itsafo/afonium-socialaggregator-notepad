@@ -24,48 +24,59 @@
                 </li>
             </ul>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">{{ request.user.email }}</div>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-6 col-lg-4">
-                            <div class="avatar-sm float-left mr-2">
+        <div class="row justify-content-center">
+            <div class="col-md-4 pl-md-0 pr-md-0">
+                <div class="card card-profile">
+                    <div class="card-header" style="background-image: url('/Analyticsets/img/blogpost.jpg')">
+                        <div class="profile-picture">
+                            <div class="avatar avatar-xl">
                                 <img src="{{ user.profile.image.url }}" alt="..." class="avatar-img rounded-circle">
-                            </div>      
-                            <div class="col-md-6 col-lg-4">
-                                <label for="exampleFormControlFile1">Update profile picture</label>
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                            </div>
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="checkbox" value="">
-                                    <span class="form-check-sign">Agree with terms and conditions</span>
-                                </label>
-                            </div>
-                            </div>
-                            <div class="form-check">
-                                <label>Gender</label><br/>
-                                <label class="form-radio-label">
-                                    <input class="form-radio-input" type="radio" name="optionsRadios" value=""  checked="">
-                                    <span class="form-radio-sign">Male</span>
-                                </label>
-                                <label class="form-radio-label ml-3">
-                                    <input class="form-radio-input" type="radio" name="optionsRadios" value="">
-                                    <span class="form-radio-sign">Female</span>
-                                </label>
                             </div>
                         </div>
                     </div>
-                    <div class="card-action">
-                        <button class="btn btn-success">Submit</button>
-                        <button class="btn btn-danger">Cancel</button>
+                    <div class="card-body">
+                        <div class="user-profile text-center">
+                            <div class="name">Hizrian, 19</div>
+                            <div class="job">Frontend Developer</div>
+                            <div class="desc">A man who hates loneliness</div>
+                            <div class="social-media">
+                                <a class="btn btn-info btn-twitter btn-sm btn-link" href="#"> 
+                                    <span class="btn-label just-icon"><i class="flaticon-twitter"></i> </span>
+                                </a>
+                                <a class="btn btn-danger btn-sm btn-link" rel="publisher" href="#"> 
+                                    <span class="btn-label just-icon"><i class="flaticon-google-plus"></i> </span> 
+                                </a>
+                                <a class="btn btn-primary btn-sm btn-link" rel="publisher" href="#"> 
+                                    <span class="btn-label just-icon"><i class="flaticon-facebook"></i> </span> 
+                                </a>
+                                <a class="btn btn-danger btn-sm btn-link" rel="publisher" href="#"> 
+                                    <span class="btn-label just-icon"><i class="flaticon-dribbble"></i> </span> 
+                                </a>
+                            </div>
+                            <div class="view-profile">
+                                <a href="#" class="btn btn-secondary btn-block">Update Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row user-stats text-center">
+                            <div class="col">
+                                <div class="number">125</div>
+                                <div class="title">Post</div>
+                            </div>
+                            <div class="col">
+                                <div class="number">25K</div>
+                                <div class="title">Followers</div>
+                            </div>
+                            <div class="col">
+                                <div class="number">134</div>
+                                <div class="title">Following</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
         <h4 class="page-title">Pricing</h4>
         <div class="row justify-content-center align-items-center mb-1">

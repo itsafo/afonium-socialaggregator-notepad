@@ -7,10 +7,7 @@ Copyright (c) 2019 - present AppSeed.us
 from django.urls import path, re_path
 from .popups import *
 # from .views  import *
-from .views import (index, 
-	panel, Notes, NewNote,
-	pages, NoteDetail, AddCategory, 
-    CategoryView, UpdateNote)
+from .views import *
 
 
 
@@ -19,7 +16,7 @@ urlpatterns = [
     re_path(r'^.*\.html', pages, name='pages'),
 
     # The home page
-    path('', Notes, name='home'),
+    path('', Home, name='home'),
     # path('category/', CategoryDetail, name='category-list'),
     # path('category/<int:id>/', CatsDetail, name='cats-detail'),
     path('notes/', Notes, name='notes'),

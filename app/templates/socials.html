@@ -10,7 +10,7 @@
 
     <div class="page-inner">
         <div class="page-header">
-            <h4 class="page-title"><a href="{% url 'new_note' %}"  data-toggle="modal" data-target="#exampleModal">TWITTER | FACEBOOK</a></h4>
+            <h4 class="page-title"><a href="{% url 'new_note' %}"  data-toggle="modal" data-target="#exampleModal">SOCIALS</a></h4>
             <ul class="breadcrumbs">
                 <li class="nav-home">
                     <a href="{% url 'notes' %}">
@@ -19,21 +19,30 @@
             </ul>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card">
+                    <h3>facebook [IMechE]</h3>
                     <div class="fb-page" data-href="https://www.facebook.com/IMechEAYMP/" data-tabs="timeline" data-width="350" data-height="700" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/IMechEAYMP/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/IMechEAYMP/">IMechE Aberdeen Young Members</a></blockquote></div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card">
-                    <a class="twitter-timeline" data-lang="en" data-width="350" data-height="400" data-theme="light" href="https://twitter.com/ReBrand_Human?ref_src=twsrc%5Etfw">Twitter ReBrand_Human</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <h3>twitter</h3>
+                    <a class="twitter-timeline" data-lang="en" data-width="350" data-height="700" data-theme="light" href="https://twitter.com/ReBrand_Human?ref_src=twsrc%5Etfw">Twitter ReBrand_Human</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>              
-            <div class="col-md-4">
-                <div class="card">                
+            <div class="col-md-3">
+                <div class="card">  
+                    <h3>facebook [AFBE - UK]</h3>              
                     <div class="fb-page" data-href="https://www.facebook.com/AFBEUKScotland/" data-tabs="timeline" data-width="350" data-height="700" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/AFBEUKScotland/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/AFBEUKScotland/">AFBE-UK Scotland</a></blockquote></div>
                 </div>
             </div>          
+            <div class="col-md-3">
+                <div class="card">  
+                    <h3>facebook [AFBE - UK]</h3>              
+                    <div class="fb-page" data-href="https://www.facebook.com/AFBEUKScotland/" data-tabs="timeline" data-width="350" data-height="700" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/AFBEUKScotland/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/AFBEUKScotland/">AFBE-UK Scotland</a></blockquote></div>
+                </div>
+            </div>              
         </div>
     </div>
 
@@ -44,14 +53,14 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title text-dark" id="exampleModalLabel">{{ request.user }}, here are your socials...</h2>
+          <h2 class="modal-title text-dark" id="exampleModalLabel">Welcome {{ request.user }} to your socials page</h2>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body text-dark">
           <h3>
-              Are you eready to view and post your contents?
+              View your contents on all social platforms?
           </h3> 
           <br>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Yes</button>

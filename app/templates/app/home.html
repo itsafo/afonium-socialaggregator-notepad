@@ -17,7 +17,7 @@
         <div class="card">
             <ul class="breadcrumbs">
                 <li class="nav-home mr-1">
-                    <a href="{% url 'notes' %}" id="alert_demo_8">
+                    <a href="{% url 'notes' %}" data-toggle="modal" data-target="#exampleModalCenter">
                         <i class="flaticon-home mr-4"></i>
                     </a>
                 </li>
@@ -33,10 +33,17 @@
                       <div class="dropdown-divider "></div>
                       <a class="dropdown-item btn btn-secondary" href="{% url 'add_category' %}">Add Category</a>
                     </div>
-                </li>
+                </li>              
                 <li class="nav-home">
                     <a class="btn btn-outline-secondary mr-4" href="/socials.html">Socials
                     </a>
+                </li>
+                <li>
+                    <div id="ModalStart" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-body">
+                              <p><i class="icon-spinner icon-spin icon-4x"></i></p>
+                        </div>
+                    </div>                    
                 </li>
             </ul>
         </div>
@@ -48,12 +55,12 @@
                         <li>
                             {% for post in posts %}
                             <div class="card-header">
-                                <h4 class="card-title"><a href="{% url 'note-update' post.id %}">Title: {{ post.title }} by {{ post.author }}</a></h4>
+                                <h4 class="card-title"><a href="{% url 'note-update' post.id %}">Title: {{ post.title }} </a></h4>
                             </div>
                             <div class="card-body">
                                 <div class="tab-content mt-2 mb-3" id="pills-tabContent">
                                     <h4>Content:</h4>
-                                    <p>Abeg work automaticaly! {{ post.content }}</p>
+                                    <p>{{ post.content }}</p>
                                 </div>
                             </div>  
                             {% endfor %}                     
@@ -69,11 +76,11 @@
                                 <h4 class="card-title"></h4>
                             </div>
                             <div>
-                                <button type="button" class="btn btn-icon btn-round btn-outline-primary mr-2">
-                                <a href="{% url 'notes' %}"><i class="fab fa-twitter"></i></a>
+                                <button type="button" class="btn btn-icon btn-round btn-outline-primary mr-2" href="{% url 'notes' %}">
+                                <i class="fab fa-twitter"></i>
                                 </button>
                                 <button type="button" class="btn btn-icon btn-round btn-outline-info mr-2 nav-item">
-                                <a href="/socials.html"><i class="fab fa-linkedin-in"></i></a> 
+                                    <i class="fab fa-linkedin-in"></i> 
                                 </button>
                                 <button type="button" class="btn btn-icon btn-round btn-outline-primary mr-2">
                                 <i class="fab fa-facebook-f"></i>
@@ -97,23 +104,43 @@
                             </div>
                         </form>
                     </div>
-                    <script type="text/javascript">
-                    $(function() {
-                        $('#your_textarea').ckeditor({
-                            toolbar: 'Full',
-                            enterMode : CKEDITOR.ENTER_BR,
-                            shiftEnterMode: CKEDITOR.ENTER_P
-                        });
-                    });
-                    </script>
                 </div>
             </div>
         </div>
     </div>
 
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-dark" id="exampleModalCenterTitle">Welcome back {{ request.user }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-dark">
+          <h3>
+              The number one rule here is... there are no rules!!!
+          </h3>
+          <h3>
+              Create contents effortlessly!
+          </h3>  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock content %}
 
 <!-- Specific JS goes HERE -->
 {% block javascripts %}
-
+    <script type="text/javascript">
+        window.onload = () => {
+          document.querySelector('[data-target="#exampleModalCenter"]').click();
+        }
+    </script> 
 {% endblock javascripts %}

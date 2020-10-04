@@ -68,7 +68,21 @@ def Notes(request):
     }
     return render(request, 'app/notes.html', context)
 
-
+@login_required(login_url="/login/")
+def Home(request):
+    posts_get = Post.objects.filter(author=request.user)     # Code to get list of categories
+    cat_menu = Category.objects.all()
+    form = PostForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+    else:
+        form = PostForm()
+    context = {
+        'posts':posts_get,
+        'cat_menu':cat_menu,
+        'form':form
+    }
+    return render(request, 'app/home.html', context)
 
 
 @login_required(login_url="/login/")
