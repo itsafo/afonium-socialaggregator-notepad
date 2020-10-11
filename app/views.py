@@ -51,6 +51,11 @@ for item in choices:
 # Having form and list of notes on the same page
 
 
+@login_required(login_url="/login/")
+def Socials(request):
+
+    return render(request, 'socials.html')
+
 
 @login_required(login_url="/login/")
 def Notes(request):

@@ -35,7 +35,7 @@
                     </div>
                 </li>              
                 <li class="nav-home">
-                    <a class="btn btn-outline-secondary mr-4" href="/socials.html">Socials
+                    <a class="btn btn-outline-secondary mr-4" href="{% url 'socials' %}">Socials
                     </a>
                 </li>
                 <li>
@@ -76,16 +76,16 @@
                                 <h4 class="card-title"></h4>
                             </div>
                             <div>
-                                <button type="button" class="btn btn-icon btn-round btn-outline-primary mr-2" href="{% url 'notes' %}">
+                                <button type="button" class="btn btn-icon btn-round btn-outline-primary mr-2" onclick="location.href='https://twitter.com/AFBEUKScotland'">
                                 <i class="fab fa-twitter"></i>
                                 </button>
-                                <button type="button" class="btn btn-icon btn-round btn-outline-info mr-2 nav-item">
+                                <button type="button" onclick="location.href='http://www.example.com'" class="btn btn-icon btn-round btn-outline-info mr-2 nav-item" onclick="location.href='https://www.linkedin.com/company/afbeukscotland/'">
                                     <i class="fab fa-linkedin-in"></i> 
                                 </button>
-                                <button type="button" class="btn btn-icon btn-round btn-outline-primary mr-2">
+                                <button type="button" class="btn btn-icon btn-round btn-outline-primary mr-2" onclick="location.href='https://www.facebook.com/AFBEUKScotland/'">
                                 <i class="fab fa-facebook-f"></i>
                                 </button>
-                                <button type="button" class="btn btn-icon btn-round btn-outline-danger">
+                                <button type="button" class="btn btn-icon btn-round btn-outline-danger" onclick="location.href='https://www.instagram.com/afbeukscotland/'">
                                 <i class="fab fa-instagram"></i>
                                 </button>
                             </div>

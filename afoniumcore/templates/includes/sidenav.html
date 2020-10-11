@@ -19,6 +19,7 @@
 										<span class="user-level">
 											{{ request.user.email }}  
 										</span>
+										<h3>Hi {{ request.user.username }}! </h3>
 										<span class="caret"></span>
 									</span>
 								</a>
@@ -54,7 +55,7 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a href="/socials.html">
+								<a href="{% url 'socials' %}">
 									<i class="fas fa-th-list"></i>
 									<p>My Socials</p>
 								</a>

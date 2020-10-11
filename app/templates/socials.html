@@ -10,15 +10,39 @@
 
     <div class="page-inner">
         <div class="page-header">
-            <h4 class="page-title"><a href="{% url 'new_note' %}"  data-toggle="modal" data-target="#exampleModal">SOCIALS</a></h4>
+          <div class="col">
             <ul class="breadcrumbs">
-                <li class="nav-home">
-                    <a href="{% url 'notes' %}">
-                        <i class="flaticon-home"></i>
-                    </a>
-            </ul>
+                <h4 class="page-title"><a href="{% url 'new_note' %}"  data-toggle="modal" data-target="#exampleModal">SOCIALS</a></h4>
+            </ul>  
+            <div class="offset-md-9">
+                <button type="button" class="btn btn-icon btn-round btn-outline-primary mr-2" onclick="location.href='https://twitter.com/AFBEUKScotland'">
+                <i class="fab fa-twitter"></i>
+                </button>
+                <button type="button" onclick="location.href='http://www.example.com'" class="btn btn-icon btn-round btn-outline-info mr-2 nav-item" onclick="location.href='https://www.linkedin.com/company/afbeukscotland/'">
+                    <i class="fab fa-linkedin-in"></i> 
+                </button>
+                <button type="button" class="btn btn-icon btn-round btn-outline-primary mr-2" onclick="location.href='https://www.facebook.com/AFBEUKScotland/'">
+                <i class="fab fa-facebook-f"></i>
+                </button>
+                <button type="button" class="btn btn-icon btn-round btn-outline-danger" onclick="location.href='https://www.instagram.com/afbeukscotland/'">
+                <i class="fab fa-instagram"></i>
+                </button>
+            </div>           
+          </div>
         </div>
         <div class="row">
+            <div class="col-md-3">
+                <div class="card">  
+                    <h3>facebook [AFBE-UK]</h3>              
+                    <div class="fb-page" data-href="https://www.facebook.com/AFBEUKScotland/" data-tabs="timeline" data-width="350" data-height="700" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/AFBEUKScotland/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/AFBEUKScotland/">AFBE-UK Scotland</a></blockquote></div>
+                </div>
+            </div>          
+            <div class="col-md-3">
+                <div class="card">  
+                    <h3>twitter [AFBE-UK]</h3>              
+                    <a class="twitter-timeline" data-width="350" data-height="700" data-theme="dark" href="https://twitter.com/AFBEUKScotland?ref_src=twsrc%5Etfw">Tweets by AFBEUKScotland</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>      
             <div class="col-md-3">
                 <div class="card">
                     <h3>facebook [IMechE]</h3>
@@ -30,19 +54,7 @@
                     <h3>twitter</h3>
                     <a class="twitter-timeline" data-lang="en" data-width="350" data-height="700" data-theme="light" href="https://twitter.com/ReBrand_Human?ref_src=twsrc%5Etfw">Twitter ReBrand_Human</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
-            </div>              
-            <div class="col-md-3">
-                <div class="card">  
-                    <h3>facebook [AFBE - UK]</h3>              
-                    <div class="fb-page" data-href="https://www.facebook.com/AFBEUKScotland/" data-tabs="timeline" data-width="350" data-height="700" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/AFBEUKScotland/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/AFBEUKScotland/">AFBE-UK Scotland</a></blockquote></div>
-                </div>
-            </div>          
-            <div class="col-md-3">
-                <div class="card">  
-                    <h3>facebook [AFBE - UK]</h3>              
-                    <div class="fb-page" data-href="https://www.facebook.com/AFBEUKScotland/" data-tabs="timeline" data-width="350" data-height="700" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/AFBEUKScotland/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/AFBEUKScotland/">AFBE-UK Scotland</a></blockquote></div>
-                </div>
-            </div>              
+            </div>         
         </div>
     </div>
 

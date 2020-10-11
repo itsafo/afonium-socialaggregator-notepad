@@ -16,9 +16,11 @@ urlpatterns = [
     re_path(r'^.*\.html', pages, name='pages'),
 
     # The home page
-    path('', Home, name='home'),
+    path('', Socials, name='home'),
+    # path('', Home, name='home'), Temporarily deprecated to test run AFBE
     # path('category/', CategoryDetail, name='category-list'),
     # path('category/<int:id>/', CatsDetail, name='cats-detail'),
+    path('socials/', Socials, name='socials'),
     path('notes/', Notes, name='notes'),
     path('notes/<int:pk>/', NoteDetail.as_view(), name='note-detail'),
     path("category/<str:pk_test>/", CategoryView, name='category-detail'),
