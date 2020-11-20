@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	
+	<title>
+		afonium - {% block title %}{% endblock %}  
+	</title>
+
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<link rel="icon" href="/static/assets/img/afonium.jpg" type="image/x-icon"/>
+	
+
+
+	<!-- Fonts and icons -->
+	<script src="/static/assets/js/plugin/webfont/webfont.min.js"></script>
+	<script>
+		WebFont.load({
+			google: {"families":["Lato:300,400,700,900"]},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], 
+			urls: ['/static/assets/css/fonts.min.css']},
+			active: function() {
+				sessionStorage.fonts = true;
+			}
+		});
+	</script>
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/assets/css/atlantis.min.css">
+
+
+	<!-- CSS Just for demo purpose, don't include it in your project -->
+	<link rel="stylesheet" href="/static/assets/css/demo.css">
+	<!-- <link href="summernote.css" rel="stylesheet"> -->
+
+    <!-- Specific CSS goes HERE -->
+    {% block stylesheets %}{% endblock stylesheets %}
+
+</head>
+<body data-background-color="dark">
+
+
+	<div class="wrapper {% block layout %}{% endblock layout %}">
+
+
+		
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm fixed-top">
+	  <a href="#" class="navbar-brand font-weight-bold mr-auto">Afonium`</a>
+	  <div id="navbarContent" class="collapse navbar-collapse order-sm-12 order-lg-1">
+	    <ul class="navbar-nav ml-auto">
+	      <!-- Megamenu-->
+	      <li class="nav-item dropdown megamenu"><a id="megamenu" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold text-uppercase">Blog</a>
+	        <div aria-labelledby="megamenu" class="dropdown-menu border-0 p-0 m-0">
+	          <div class="container-fluid">
+	            <div class="row bg-dark text-light rounded-0 m-0 shadow-sm">
+	              <div class="col-12">
+	                <div class="p-4">
+	                  <div class="row">
+	                    <div class="col-sm-6 col-lg-3 mb-4">
+	                      <h6 class="font-weight-bold text-uppercase">Heading 1</h6>
+	                      <ul class="list-unstyled">
+	                        <li class="nav-item"><a href="#" class="nav-link text-small pb-0">Unique Features</a></li>
+	                        <li class="nav-item"><a href="#" class="nav-link text-small pb-0 ">Image Responsive</a></li>
+	                        <li class="nav-item"><a href="#" class="nav-link text-small pb-0 ">Auto Carousel</a></li>
+	                        <li class="nav-item"><a href="#" class="nav-link text-small pb-0 ">Newsletter Form</a></li>
+	                      </ul>
+	                    </div>
+	                  </div>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </li>
+	      <li class="nav-item"><a href="" class="nav-link font-weight-bold text-uppercase">About</a></li>
+	      <li class="nav-item"><a href="" class="nav-link font-weight-bold text-uppercase">Services</a></li>
+	      <li class="nav-item"><a href="" class="nav-link font-weight-bold text-uppercase">Contact</a></li>
+	      <li class="nav-item"><a href="{% url 'register' %}" class="nav-link font-weight-bold text-uppercase">Register</a></li>
+	    </ul>
+	  </div>  
+	  <button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler order-md-1">
+	          <span class="navbar-toggler-icon"></span>
+	      </button>
+	</nav>
+
+			<div class="content">
+
+				{% block content %}{% endblock content %}
+
+    <!-- Footer Area -->
+    <footer class="footer_area">
+        <div class="container">
+            <div class="footer_row row">
+                <div class="col-md-3 col-sm-6 footer_about">
+                    <h2>ABOUT OUR COMPANY</h2>
+                    <img src="static/drilltool/images/logo-foot.png" alt="">
+                    <p>We are freelance oil and gas service providers, looking to provide easy and free access to key technologies in the industry through this platform. We are continuously looking to expand the capacity of our team.</p>
+                    <ul class="socail_icon">
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 footer_about quick">
+                    <h2>Quick links</h2>
+                    <ul class="quick_link">
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Mud Optimization</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Home Renovation</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Hardwood Flooring</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Repairing Of Roof</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Commercial Construction</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Concreate Transport</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 footer_about">
+                    <h2>Twitter Feed</h2>
+                    <a href="#" class="twitter">@colorlib: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a>
+                    <a href="#" class="twitter">@colorlib: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a>
+                </div>
+                <div class="col-md-3 col-sm-6 footer_about">
+                    <h2>CONTACT US</h2>
+                    <address>
+                        <p>Have questions, comments or just want to say hello:</p>
+                        <ul class="my_address">
+                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>afolabi@abulad.com.ng</a></li>
+                            <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>+447916748856</a></li>
+                            <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span>Aberdeen City, Aberdeen, United Kingdom AB25 1DP</span></a></li>
+                        </ul>
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="copyright_area">
+            Copyright 2020 All rights reserved.
+        </div>
+    </footer>
+    <!-- End Footer Area -->	
+
+		</div>
+		
+		{% include 'includes/aside-settings.html' %}
+
+	</div>
+
+	{% include 'includes/scripts.html' %}
+
+	<!-- Specific JS goes HERE -->
+    {% block javascripts %}
+
+    {% endblock javascripts %}
+	
+</body>
+</html>

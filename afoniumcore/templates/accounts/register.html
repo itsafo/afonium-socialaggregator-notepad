@@ -1,5 +1,5 @@
 
-{% extends "layouts/base.html" %}
+{% extends "layouts/landing-base.html" %}
 
 {% block title %} Login {% endblock title %}
 
@@ -53,7 +53,7 @@
                             </p>
                         {% else %}
                             <p style="margin-left: 25px">    
-                                Add your credentials or <a href={% url 'login' %} >authenticate</a> with an existing account.
+                                Add your credentials or <a href="{% url 'login' %}" >authenticate</a> with an existing account.
                             </p>
                         {% endif %}
 
