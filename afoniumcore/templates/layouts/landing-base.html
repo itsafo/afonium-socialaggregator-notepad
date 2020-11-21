@@ -47,36 +47,15 @@
 
 		
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm fixed-top">
-	  <a href="#" class="navbar-brand font-weight-bold mr-auto">Afonium`</a>
+	  <a href="{% url 'home' %}" class="navbar-brand font-weight-bold mr-auto">Afonium`</a>
 	  <div id="navbarContent" class="collapse navbar-collapse order-sm-12 order-lg-1">
 	    <ul class="navbar-nav ml-auto">
 	      <!-- Megamenu-->
-	      <li class="nav-item dropdown megamenu"><a id="megamenu" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold text-uppercase">Blog</a>
-	        <div aria-labelledby="megamenu" class="dropdown-menu border-0 p-0 m-0">
-	          <div class="container-fluid">
-	            <div class="row bg-dark text-light rounded-0 m-0 shadow-sm">
-	              <div class="col-12">
-	                <div class="p-4">
-	                  <div class="row">
-	                    <div class="col-sm-6 col-lg-3 mb-4">
-	                      <h6 class="font-weight-bold text-uppercase">Heading 1</h6>
-	                      <ul class="list-unstyled">
-	                        <li class="nav-item"><a href="#" class="nav-link text-small pb-0">Unique Features</a></li>
-	                        <li class="nav-item"><a href="#" class="nav-link text-small pb-0 ">Image Responsive</a></li>
-	                        <li class="nav-item"><a href="#" class="nav-link text-small pb-0 ">Auto Carousel</a></li>
-	                        <li class="nav-item"><a href="#" class="nav-link text-small pb-0 ">Newsletter Form</a></li>
-	                      </ul>
-	                    </div>
-	                  </div>
-	                </div>
-	              </div>
-	            </div>
-	          </div>
-	        </div>
+	      <li class="nav-item"><a href="{% url 'home' %}" class="nav-link font-weight-bold text-uppercase">Blog</a>
 	      </li>
-	      <li class="nav-item"><a href="" class="nav-link font-weight-bold text-uppercase">About</a></li>
-	      <li class="nav-item"><a href="" class="nav-link font-weight-bold text-uppercase">Services</a></li>
-	      <li class="nav-item"><a href="" class="nav-link font-weight-bold text-uppercase">Contact</a></li>
+	      <li class="nav-item"><a href="{% url 'home' %}#about" class="nav-link font-weight-bold text-uppercase">About</a></li>
+	      <li class="nav-item"><a href="{% url 'home' %}#services" class="nav-link font-weight-bold text-uppercase">Services</a></li>
+	      <li class="nav-item"><a href="{% url 'home' %}#contact" class="nav-link font-weight-bold text-uppercase">Contact</a></li>
       	<form method="post" action="">
       		{% csrf_token %}
       		<ul class="navbar-nav ml-auto">
@@ -124,13 +103,13 @@
 				{% block content %}{% endblock content %}
 
     <!-- Footer Area -->
-    <footer class="footer_area">
+    <footer class="footer_area" id="footer">
         <div class="container">
             <div class="footer_row row">
-                <div class="col-md-3 col-sm-6 footer_about">
+                <div class="col-md-3 col-sm-6 footer_about" id="about">
                     <h2>ABOUT OUR COMPANY</h2>
                     <img src="static/drilltool/images/logo-foot.png" alt="">
-                    <p>We are freelance oil and gas service providers, looking to provide easy and free access to key technologies in the industry through this platform. We are continuously looking to expand the capacity of our team.</p>
+                    <p>We provide social media management services to enhance productivity of day to day social media users</p>
                     <ul class="socail_icon">
                         <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -138,23 +117,23 @@
                         <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 col-sm-6 footer_about quick">
+                <div class="col-md-3 col-sm-6 footer_about quick" id="services">
                     <h2>Quick links</h2>
                     <ul class="quick_link">
-                        <li><a href="#"><i class="fa fa-chevron-right"></i>Mud Optimization</a></li>
-                        <li><a href="#"><i class="fa fa-chevron-right"></i>Home Renovation</a></li>
-                        <li><a href="#"><i class="fa fa-chevron-right"></i>Hardwood Flooring</a></li>
-                        <li><a href="#"><i class="fa fa-chevron-right"></i>Repairing Of Roof</a></li>
-                        <li><a href="#"><i class="fa fa-chevron-right"></i>Commercial Construction</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Time Optimization</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>All in on dashboard</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Multiple Socials</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Post Optimisation</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Followers Growth</a></li>
                         <li><a href="#"><i class="fa fa-chevron-right"></i>Concreate Transport</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 col-sm-6 footer_about">
+                <div class="col-md-3 col-sm-6 footer_about" id="">
                     <h2>Twitter Feed</h2>
-                    <a href="#" class="twitter">@colorlib: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a>
-                    <a href="#" class="twitter">@colorlib: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a>
+                    <a href="#" class="twitter">@afonium: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a>
+                    <a href="#" class="twitter">@afonium: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a>
                 </div>
-                <div class="col-md-3 col-sm-6 footer_about">
+                <div class="col-md-3 col-sm-6 footer_about" id="contact">
                     <h2>CONTACT US</h2>
                     <address>
                         <p>Have questions, comments or just want to say hello:</p>
