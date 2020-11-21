@@ -77,6 +77,40 @@
 	      <li class="nav-item"><a href="" class="nav-link font-weight-bold text-uppercase">About</a></li>
 	      <li class="nav-item"><a href="" class="nav-link font-weight-bold text-uppercase">Services</a></li>
 	      <li class="nav-item"><a href="" class="nav-link font-weight-bold text-uppercase">Contact</a></li>
+      	<form method="post" action="">
+      		{% csrf_token %}
+      		<ul class="navbar-nav ml-auto">
+	      		<li class="nav-item">
+	                <div class="form-group">
+	                    <div class="input-group mb-3">
+	                        <div class="input-group-prepend">
+	                            <span class="input-group-text">
+	                                <i class="icon-user"></i>
+	                            </span>
+	                        </div>
+	                        {{ form.username }}
+	                    </div>
+	                </div>	
+	            </li>
+	            <li class="nav-item">
+	                <div class="form-group">
+	                    <div class="input-group mb-3">
+	                        <div class="input-group-prepend">
+	                            <span class="input-group-text">
+	                                <i class="icon-lock"></i>
+	                            </span>
+	                        </div>
+	                        {{ form.password }}
+	                    </div>
+	                </div>    
+	            </li>  
+	            <li class="nav-item">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Login</button>
+                    </div>		            	
+	            </li>            
+            </ul>                		
+      	</form>
 	      <li class="nav-item"><a href="{% url 'register' %}" class="nav-link font-weight-bold text-uppercase">Register</a></li>
 	    </ul>
 	  </div>  
