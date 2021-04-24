@@ -1,6 +1,6 @@
 # [afonium](https://afonium.herokuapp.com/)
 
-> **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** [Social Media Aggregator](https://afonium.herokuapp.com/) - features:
+> **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** ![Social Media Aggregator](https://github.com/itsafo/afonium-socialaggregator-notepad/tree/master/afoniumcore/static/assets/img/Socials_aggregator.png) - features:
 
 - UI Kit: **[afonium]()** (Free version) provided by **ThemeKita**
 - UI-Ready app, SQLite Database, Django Native ORM
@@ -18,18 +18,11 @@
 
 <br />
 
-## Want more? Go PRO!
-
-PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Support** (via [Discord](https://discord.gg/fZC6hup))
-
-| [Django DattaAble Dark PRO](https://appseed.us/admin-dashboards/django-dashboard-dattaable-dark-pro) | [Django Dashboard Black PRO](https://appseed.us/admin-dashboards/django-dashboard-black-pro) | [Django StarAdmin Dark PRO](https://appseed.us/admin-dashboards/django-dashboard-staradmin-black-pro) |
-| --- | --- | --- |
-
+## Screenshots
 
 <br />
-<br />
 
-![Django Dashboard Atlantis Dark - Open-Source Web App.](https://raw.githubusercontent.com/app-generator/static/master/products/django-dashboard-atlantis-dark-screen.png)
+![Notepad](https://github.com/itsafo/afonium-socialaggregator-notepad/blob/master/afoniumcore/static/assets/img/Notepad.png)
 
 <br />
 
@@ -63,6 +56,10 @@ $ # Start the app - custom port
 $ # python manage.py runserver 0.0.0.0:<your_port>
 $
 $ # Access the web app in browser: http://127.0.0.1:8000/
+
+## Login details
++ Username: TestUser
++ Password: testing321
 ```
 
 <br />
