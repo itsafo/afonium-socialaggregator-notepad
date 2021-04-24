@@ -79,8 +79,8 @@ The application can be easily executed in a docker container. The steps:
 > Get the code
 
 ```bash
-$ git clone https://github.com/app-generator/django-dashboard-atlantis-dark.git
-$ cd django-dashboard-atlantis-dark
+$ git clone https://github.com/itsafo/afonium-socialaggregator-notepad.git
+$ cd afonium-socialaggregator-notepad
 ```
 
 > Start the app in Docker
