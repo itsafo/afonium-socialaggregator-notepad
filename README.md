@@ -1,6 +1,6 @@
-# [afonium]
+# [afonium](https://afonium.herokuapp.com/)
 
-> **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - features:
+> **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** [Social Media Aggregator](https://afonium.herokuapp.com/) - features:
 
 - UI Kit: **[afonium]()** (Free version) provided by **ThemeKita**
 - UI-Ready app, SQLite Database, Django Native ORM
@@ -13,11 +13,8 @@
 
 > Links
 
-- [Django Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark) - Product page
-- [Django Dashboard Atlantis Dark](https://django-dashboard-atlantis-dark.appseed.us/login/) - LIVE Demo
-- [Django Dashboard Atlantis Dark](https://docs.appseed.us/admin-dashboards/django-dashboard-atlantis-dark/) - Documentation
-- More [Django Admin Dashboards](https://appseed.us/admin-dashboards/django) - index hosted by **AppSeed**
-- [Free Admin Dashboards](https://appseed.us/admin-dashboards/open-source) - index hosted by **AppSeed**
+- [Django Dashboard Atlantis Dark](https://afonium.herokuapp.com/) - Product page
+
 
 <br />
 
@@ -27,7 +24,7 @@ PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Suppo
 
 | [Django DattaAble Dark PRO](https://appseed.us/admin-dashboards/django-dashboard-dattaable-dark-pro) | [Django Dashboard Black PRO](https://appseed.us/admin-dashboards/django-dashboard-black-pro) | [Django StarAdmin Dark PRO](https://appseed.us/admin-dashboards/django-dashboard-staradmin-black-pro) |
 | --- | --- | --- |
-| [![Django DattaAble Dark PRO](https://raw.githubusercontent.com/app-generator/django-dashboard-dattaable-dark-pro/master/media/django-dashboard-dattaable-dark-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-dattaable-dark-pro) | [![Django Dashboard Black PRO](https://raw.githubusercontent.com/app-generator/django-dashboard-black-pro/master/media/django-dashboard-black-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-black-pro) | [![Django StarAdmin Dark PRO](https://raw.githubusercontent.com/app-generator/django-dashboard-staradmin-black-pro/master/media/django-dashboard-staradmin-black-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-staradmin-black-pro)
+
 
 <br />
 <br />
@@ -156,9 +153,3 @@ A dashboard is a set of pages that are easy to read and offer information to the
 
 ### [Atlantis Dark Dashboard](https://www.themekita.com/atlantis-lite-bootstrap-dashboard.html?ref=appseed)
 
-**[Atlantis Dark Dashboard](https://www.themekita.com/atlantis-lite-bootstrap-dashboard.html?ref=appseed)** is a free bootstrap 4 admin dashboard that is beautifully and elegantly designed to display various metrics, numbers or data visualization. Atlantis Dark admin dashboard has 2 layouts, many plugins and UI components to help developers create dashboards quickly and effectively so they can save development time and also help users to make the right and fast decisions based on existing data. - provided by **ThemeKita**.
-
-<br />
-
----
-**[Django Dashboard Atlantis Dark](https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark)** - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
