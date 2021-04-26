@@ -8,14 +8,14 @@ A social media aggregator with notepad under development to easily jot and deplo
 + Python
 
 
-![Social Media Aggregator](https://github.com/itsafo/afonium-socialaggregator-notepad/blob/master/afoniumcore/static/assets/img/Socials_aggregator.png) 
+
 
 ## Screenshots
 
 <br />
-
-
-
+[Social Media Aggregator](https://afonium.herokuapp.com/)
+![Social Media Aggregator](https://github.com/itsafo/afonium-socialaggregator-notepad/blob/master/afoniumcore/static/assets/img/Socials_aggregator.png) 
+[Notepad](https://afonium.herokuapp.com/)
 ![Notepad](https://github.com/itsafo/afonium-socialaggregator-notepad/blob/master/afoniumcore/static/assets/img/Notepad.png)
 
 <br />
