@@ -26,8 +26,8 @@ A social media aggregator with notepad under development to easily jot and deplo
 ## How to use it
 ```bash
 $ # Get the code
-$ git clone https://github.com/app-generator/django-dashboard-atlantis-dark.git
-$ cd django-dashboard-atlantis-dark
+$ git clone https://github.com/itsafo/afonium-socialaggregator-notepad.git
+$ cd afonium-socialaggregator-notepad
 $
 $ # Virtualenv modules installation (Unix based systems)
 $ virtualenv env
