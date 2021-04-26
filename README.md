@@ -1,6 +1,8 @@
 # [afonium](https://afonium.herokuapp.com/)
 
-> **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** ![Social Media Aggregator](https://github.com/itsafo/afonium-socialaggregator-notepad/tree/master/afoniumcore/static/assets/img/Socials_aggregator.png) - features:
+> **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** 
+> ![Social Media Aggregator](https://github.com/itsafo/afonium-socialaggregator-notepad/tree/master/afoniumcore/static/assets/img/Socials_aggregator.png) 
+> - features:
 
 - UI Kit: **[afonium]()** (Free version) provided by **ThemeKita**
 - UI-Ready app, SQLite Database, Django Native ORM
