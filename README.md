@@ -1,22 +1,16 @@
 # [afonium](https://afonium.herokuapp.com/)
+A social media aggregator with notepad under development to easily jot and deploy notes to different social media pages
 
-> **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** 
-> ![Social Media Aggregator](https://github.com/itsafo/afonium-socialaggregator-notepad/tree/master/afoniumcore/static/assets/img/Socials_aggregator.png) 
-> - features:
+> **Open-Source Admin Dashboard** coded in **Django Framework** by **Afolabi** 
+![Social Media Aggregator](https://github.com/itsafo/afonium-socialaggregator-notepad/tree/master/afoniumcore/static/assets/img/Socials_aggregator.png) 
 
-- UI Kit: **[afonium]()** (Free version) provided by **ThemeKita**
-- UI-Ready app, SQLite Database, Django Native ORM
-- Modular design, clean code-base
-- Session-Based Authentication, Forms validation
-- Deployment scripts: Docker, Gunicorn / Nginx
-- **MIT License**
-- Free support via **Github** 
-- Paid Support **24/7 LIVE Support** via [Discord](https://discord.gg/fZC6hup)
+#### Requirements
++ Django
++ Python
 
-> Links
 
-- [Django Dashboard Atlantis Dark](https://afonium.herokuapp.com/) - Product page
 
+- [Afonium](https://afonium.herokuapp.com/) - Notepad page
 
 <br />
 
@@ -29,7 +23,6 @@
 <br />
 
 ## How to use it
-
 ```bash
 $ # Get the code
 $ git clone https://github.com/app-generator/django-dashboard-atlantis-dark.git
