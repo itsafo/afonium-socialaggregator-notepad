@@ -9,13 +9,59 @@
 
 
 {% block content %}
-
+        <br />
+        <br />
+        <br />                    
+        <br />
     <div class="page-inner view" style="background-image: url('/static/assets/img/social_media.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
         <div class="row">
             <div class="col-md-6">
                 <div class="card">
                     <br />
-                    <br />
+
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <div class="form-group">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="icon-user"></i>
+                                            </span>
+                                        </div>
+                                        {{ form.username }}
+                                    </div>
+                                </div>  
+                            </li>
+                            <li class="nav-item">
+                                <div class="form-group">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="icon-lock"></i>
+                                            </span>
+                                        </div>
+                                        {{ form.password }}
+                                    </div>
+                                </div>    
+                            </li>  
+                            <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item">
+                                    <div class="list-group-item">
+                                        <button type="submit" class="btn btn-success">Login</button>
+                                    </div>      
+                                </li>       
+                                <li class="list-group-item">
+                                    <div class="list-group-item">
+                                        <a href="{% url 'register' %}" class="nav-link font-weight-bold text-uppercase">Register</a>
+                                    </div>
+                                </li>       
+                            </ul>        
+                        </ul>                       
+                    </form>
+                                          
+<!--                     <br />
                     <div class="card-header">
                         <div class="card-title">
                             <span>Register</span>
@@ -23,8 +69,8 @@
                         </div>
                     </div>
 
-                    <br />
-                        <form method="post" action="">
+                    <br /> -->
+<!--                         <form method="post" action="">
 
                             {% csrf_token %}
 
@@ -89,7 +135,7 @@
                                 <span>Already have and account?</span> <a href="{% url 'login' %}">Login</a>
                             </div>
 
-                        </form>
+                        </form> -->
                 </div>
             </div>
             <div class="col-md-6">
@@ -104,24 +150,30 @@
 
     <!-- About Us Area -->
     <section class="about_us_area row" id="more-aboutus" >
+        <br />
+        <br />
         <div class="container">
             <div class="tittle wow fadeInUp">
-                <h2>ABOUT US</h2>
-                <h4>Afonium is a developing service for social media management founded in 2019 by Abdul Afolabi {{ test }}</h4>
+                <h2 class="p-3 text-white">ABOUT US</h2>
+                <h4 class="text-white">Afonium is a developing service for social media management founded in 2019 by Abdul Afolabi {{ test }}</h4>
             </div>
+            <br />
+            <br />
             <div class="row about_row">
                 <div class="who_we_area col-md-7 col-sm-6">
                     <div class="subtittle">
-                        <h2>WHO WE ARE</h2>
+                        <h2 class="p-3 text-white">WHO WE ARE</h2>
                     </div>
-                    <p>We provide social media management services to enhance productivity of day to day social media users</p>
-                    <a href="#" class="button_all">Contact Now</a>
+                    <h4 class="text-white">We provide social media management services to enhance productivity of day to day social media users</h4>
+                    <a href="https://afolabi.tk/contact/" target='_blank' class="p-3 mb-2">Contact Now</a>
                 </div>
                 <div class="col-md-5 col-sm-6 about_client">
                     <img src="static/assets/img/social_media.jpg" alt="">
                 </div>
             </div>
         </div>
+        <br />
+        <br />
     </section>
     <!-- End About Us Area -->
 
